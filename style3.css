@@ -1,0 +1,763 @@
+
+/* Universal selector for resetting margins, padding, and box sizing*/
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Hiding the scrollbar (webkit browsers only) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* BODY styling*/
+body {
+    background-color: #0A192F;
+    max-width: 100vw;
+}
+
+/* Navigation Bar styling */
+.navbar {
+    height: 10vh;
+    background-color: #0a192f83;
+    border: 1px solid #3E4555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0 4px 8px 4px #3e455576;
+    z-index: 1;
+}
+
+/* Container of Navigation link styling*/
+.links-container {
+    width: 45vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    padding: 0.4rem;
+}
+
+/* Navigation links styling */
+.links-container>a {
+    text-decoration: none;
+    color: #CACAEE;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Nova Square;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+    padding: 0.4rem;
+    transition: all 0.5s ease-out;
+}
+
+/* Hiding the hamburger icons for larger screen*/
+#hamburger-active,
+.open-hamburger-button,
+.close-hamburger-button {
+    display: none;
+    transition: all 0.5s ease-out;
+}
+
+/* Hover property for anchor tags and buttons on the NavBar */
+.links-container>a:hover,
+.close-hamburger-button:hover,
+.open-hamburger-button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0 0 8px 6px rgb(57, 124, 162);
+    border-radius: 12px;
+    scale: 1.02;
+}
+
+/* Right side of navbar with social icons styling */
+.right {
+    width: 20vw;
+    height: 8vh;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+/* Social icons styling */
+.right>a {
+    text-decoration: none;
+    color: #CACAEE;
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-out;
+}
+
+/* Hover property for Social Icons */
+.right>a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0 0 8px 6px rgb(57, 124, 162);
+    color: #CACAEE;
+    border-radius: 15px;
+    scale: 1.15;
+}
+
+/* MAIN STYLING */
+/* SECTION 1 : HOME styling*/
+#home {
+    display: grid;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 60vh;
+    padding-top: 30vh;
+    padding-bottom: 5vh;
+    margin-top: 0vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1.1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Introduction section styling*/
+.intro-name {
+    width: 60vw;
+    justify-self: center;
+    align-self: center;
+    font-size: 3.5rem;
+    font-family: Silkscreen, sans-serif;
+    color: #CACAEE;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 8px 4px #3e455576;
+    border-radius: 10px;
+    position: relative;
+    animation: load 3.5s ease-out 0.1s 1 forwards;
+    transition: all 0.5s ease-out;
+}
+
+/* My Name styling */
+.intro-name>span {
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+/* Introduction-about styling */
+.intro-about {
+    width: 60vw;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.8rem;
+    font-family: montserrat, sans-serif;
+    color: #CACAEE;
+    text-align: justify;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 8px 4px #3e455576;
+    border-radius: 10px;
+    position: relative;
+    animation: load 2.5s ease-out 0.1s 1 forwards;
+    transition: all 0.5s ease-out;
+}
+
+/* Animation for Introduction section || Home section */
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* HOVER PROPETIES FOR INTRO SECTION */
+.intro-name:hover,
+.intro-about:hover {
+    cursor: pointer;
+    scale: 1.02;
+    box-shadow: 0 0 8px 8px rgb(57, 124, 162);
+}
+
+
+/*SECTION 2 : ABOUT Styling*/
+
+/* About and Eduction both section styling */
+#about,
+#education {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 60vh;
+    margin-top: 5vh;
+    padding: 15vh 20vw 2vh 20vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    overflow: hidden;
+}
+
+/* Headings of About, Eduction, Skills, Contact Section styling */
+#about>h2,
+#education>h2,
+#skills>h2,
+#projects>h2,
+#contact>h2 {
+    justify-self: center;
+    align-self: center;
+    font-size: 3rem;
+    font-family: nova square;
+    color: white;
+}
+
+/* General Styling for About, Eduction and Skills section's Images */
+.image {
+    height: 20rem;
+    width: 15rem;
+    overflow: hidden;
+    border: 1px solid white;
+    box-shadow: 0 0 8px 4px #3e455576;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+
+/* HOVER PROPERTY FOR IMAGES */
+.image:hover {
+    scale: 1.02;
+    box-shadow: 0 0 8px 8px rgb(57, 124, 162);
+}
+
+/* First Image of About section styling */
+.about-img1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    justify-self: start;
+    align-self: start;
+    animation: left-slide 2.5s ease-out 0.5s 1 forwards;
+}
+
+/* Second Image of About section styling */
+.about-img2 {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    justify-self: end;
+    align-self: end;
+    animation: left-slide 2s ease-out 0.5s 1 forwards;
+}
+
+/* General Styling for About, Eduction and Skills section's paragraphs and for inputs in Conatct section */
+.paragraph {
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #051021;
+    box-shadow: 0 0 8px 4px #3e455576;
+    border-radius: 10px;
+    color: #CACAEE;
+    font-size: 1.1rem;
+    font-family: montserrat, sans-serif;
+    padding: 1rem;
+    text-align: justify;
+    transition: all 0.5s ease-out;
+}
+
+/* HOVER PROPERTY FOR PARAGRAPHS (also for buttons and inputs in contacts) */
+.paragraph:hover {
+    scale: 1.02;
+    border: 1px solid white;
+    box-shadow: 0 0 8px 8px rgb(57, 124, 162);
+}
+
+/* First Paragraph of About section styling */
+.about-para1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: start;
+    animation: left-slide 2s ease-out 0.5s 1 forwards;
+}
+
+/* Second paragraph of About section styling */
+.about-para2 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-self: start;
+    align-self: end;
+    animation: left-slide 2.5s ease-out 0.5s 1 forwards;
+}
+
+/* About Section ANIMATION */
+@keyframes left-slide {
+    from {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Eduction Section Styling */
+
+/* First Paragraph of Education section styling */
+.education-para1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    justify-self: start;
+    align-self: start;
+    animation: right-slide 0.5s ease-out 0.5s 1 forwards;
+}
+
+/* Second paragraph of Edcuation section styling */
+.education-para2 {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    justify-self: end;
+    justify-self: end;
+    animation: right-slide 1.5s ease-out 0.5s 1 forwards;
+}
+
+/* First Image of Education section styling */
+.education-img1 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    justify-self: end;
+    align-self: start;
+    animation: right-slide 2s ease-out 0.5s 1 forwards;
+}
+
+/* Second Image of Education section styling */
+.education-img2 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    justify-self: start;
+    align-self: end;
+    animation: right-slide 1s ease-out 0.5s 1 forwards;
+}
+
+/* Education Section Animation */
+@keyframes right-slide {
+    from {
+        transform: translateX(600px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* GFG image Paralax effect stying */
+.gfg {
+    width: 100vw;
+    height: 35vh;
+    margin-top: 10vh;
+    background-image: url(gfg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 15vh;
+}
+
+/* SKILLS Section Styling */
+#skills {
+    min-height: 60vh;
+    padding: 15vh 20vw 2vh 20vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.25fr 0.3fr 1fr;
+    gap: 1.2rem;
+    overflow: hidden;
+}
+
+/* Heading of Skills section styling */
+#skills>h2 {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+/* First paragraph of Skills section styling */
+.skills-para1 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    animation: slide-bottom 2.8s ease-out 0.5s 1 forwards;
+}
+
+/* Second Paragraph of Skills section styling */
+.skills-para2>ul {
+    list-style-type: none;
+}
+
+.skills-para2>ul>li {
+    margin-bottom: 10px;
+}
+
+.skills-para2 {
+    width: 15rem;
+    text-align: start;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-left: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    animation: slide-bottom 2s ease-out 0.5s 1 forwards;
+}
+
+/* First Image of Skills section styling */
+.skills-img1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    animation: slide-bottom 2.4s ease-out 0.5s 1 forwards;
+}
+
+/* Second Image of Skills section styling */
+.skills-img2 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    animation: slide-bottom 1.6s ease-out 0.5s 1 forwards;
+}
+
+/* Projects Section */
+#projects {
+    min-height: 60vh;
+    padding: 15vh 20vw 2vh 20vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+}
+
+#projects>h2{
+    grid-row: 1/2;
+}
+.projects-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    width:600px;
+    height: auto;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #051021;
+    box-shadow: 1px 1px 8px 4px #5d5e6176;
+    border-radius: 10px;
+    color: #CACAEE;
+    font-size: 1.1rem;
+    font-family: montserrat, sans-serif;
+    padding: 1rem;
+    text-align: centre;
+    transition: all 0.5s ease-out;
+    gap: 20px;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.project-card:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(144, 176, 236, 0.2);
+}
+
+/* Skills Section Animation */
+@keyframes slide-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* FOOTER  STYLING*/
+/* Contact Section Styling */
+#contact {
+    padding: 15vh 20vw 2vh 20vw;
+   
+    animation: from-left 2.5s ease-out 0.5s 1 forwards;
+}
+
+/*Contact section Heading styling*/
+#contact>h2 {
+    width: 60vw;
+    text-align: center;
+}
+
+/* Contact form styling */
+form {
+    padding: 0 2vw 0 2vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1rem;
+}
+
+/* Submit button styling */
+form>button {
+    width: 6rem;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button hover propertiy */
+form>button:hover {
+    color: rgb(57, 124, 162);
+    font-weight: bold;
+    animation: pop 0.3s ease 0s infinite backwards;
+}
+
+@keyframes pop {
+    form {
+        scale: 1.2;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+/* input,textarea styling */
+form>input,
+form>textarea {
+    border: 1px solid #051021;
+    width: 58vw;
+}
+
+/* Contact Section Animation */
+@keyframes from-left {
+    from {
+        transform: translateX(600px) scale(0) rotate(360deg);
+    }
+
+    to {
+        transform: translateX(0px) scale(1);
+    }
+}
+
+
+/* FOOT styling */
+.foot {
+    background-color: #051021;
+    padding: 2vh 20vw 2vh 20vw;
+    margin-top: 10vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Foot paragraphs styling */
+.foot>p {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: #CACAEE;
+    font-family: nova square;
+}
+
+/* Footer Icons(links) styling */
+.footer-icons {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 1rem;
+    padding: 0.7rem;
+    color: rgb(57, 124, 162);
+    border: 2px solid rgb(57, 124, 162);
+    border-radius: 50%;
+    transition: all 0.5s linear;
+}
+
+/* HOVER porperty for footer icons */
+.footer-icons>a:hover {
+    scale: 1.2;
+    color: #CACAEE;
+    background-color: rgb(57, 124, 162);
+    box-shadow: 0 0 6px 4px rgb(57, 124, 162);
+}
+
+
+/* Responsive Design: Apply styles for screens with a maximum width of 800px */
+
+@media (max-width:800px) {
+
+    /*NAVBAR HAMBURGER RESPONSIVE STYLING*/
+    .navbar {
+        padding-right: 0.4rem;
+        max-width: 100vw;
+        height: 8vh;
+    }
+
+    /* Icons right side of navbar Responsive styling */
+    .right {
+        width: 50vw;
+    }
+
+    /* Links Container responsive stying */
+    .links-container {
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        position: fixed;
+        top: 0px;
+        left: -100%;
+        z-index: 10;
+        width: 150px;
+        height: 100%;
+        background-color: #0a192fa1;
+        border: 1px solid #3E4555;
+        box-shadow: -5px 0 8px 4px #3e455576;
+    }
+
+    /* Links inside the Links container Responsive styling */
+    .links-container>a {
+        box-sizing: border-box;
+        height: auto;
+        margin: 1rem;
+    }
+
+    /* Open and close hamburger buttons styling */
+    .open-hamburger-button,
+    .close-hamburger-button {
+        display: block;
+        padding: 2px;
+        border-radius: 5px;
+        background-color: #0a192fa1;
+    }
+
+    /* Close hamburger button styling */
+    .close-hamburger-button {
+        margin: 0.1rem 0 1rem 0;
+    }
+
+    /* links Container styling after checking Hamburger Active */
+    #hamburger-active:checked~.links-container {
+        left: 0;
+        transition: 1s;
+    }
+
+    /* Open hamburger Button styling after checking Hamburger Active */
+    #hamburger-active:checked~.open-hamburger-button {
+        opacity: 0;
+    }
+
+
+    /* HOME SECTION RESPONSIVE STYLING*/
+
+    #home {
+        padding: 5vh;
+        padding-top: 30vh;
+    }
+
+    /* Name and About Styling */
+    .intro-name,
+    .intro-about {
+        font-size: 3.5vw;
+    }
+
+    .intro-name>span {
+        font-size: 10vw;
+    }
+
+    /* SKILLS SECTION RESPOSNIVE STYLING */
+    #projects
+    #skills {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.5fr repeat(3, 1fr);
+        row-gap: 1.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ABOUT SECTION RESPONSIVE STYLING */
+    #about,
+    #education {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.8fr 1fr 0.8fr 1fr;
+        row-gap: 1.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* GRID STYLING FOR ABOUT, EDUCATION, AND SKILLS SECTIONS */
+    #about>h2,
+    .about-para1,
+    .about-img1,
+    .about-para2,
+    .about-img2,
+    #eduaction>h2,
+    .education-para1,
+    .education-img1,
+    .education-para2,
+    .education-img2,
+    #skills>h2,
+    .skills-para1,
+    .skills-img1,
+    .skills-para2,
+    .skills-img2, 
+    .projects>h2{
+        grid-column: 1/2;
+        grid-row: auto;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* Footer Icons responsive styling */
+    .footer-icons>a {
+        box-sizing: content-box;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        font-size: 3.5vw;
+        padding: 0.4rem;
+    }
+}
